@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- مهم: ترتيب الميتا بحيث يكون viewport أولاً -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="UTF-8" />
+  <title>صانع خطوط مزخرفة</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #1e1e2f;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      min-height: 100vh;
+      padding: 30px 15px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #64ffda;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 500px;
+      height: 70px;
+      padding: 12px 16px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: #292940;
+      color: #eee;
+      margin-bottom: 20px;
+      resize: vertical;
+      box-shadow: 0 0 8px #64ffda66;
+      transition: box-shadow 0.3s ease;
+    }
+
+    button {
+      width: 100%;
+      max-width: 500px;
+      padding: 14px 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, #64ffda, #1de9b6);
+      color: #1e1e2f;
+      cursor: pointer;
+      box-shadow: 0 0 12px #1de9b688;
+      transition: background 0.3s ease;
+      margin-bottom: 30px;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #1de9b6, #64ffda);
+    }
+
+    .results {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .result {
+      background: #292940;
+      padding: 15px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: inset 0 0 6px #64ffda33;
+    }
+
+    .text-output {
+      flex-grow: 1;
+      color: #fff;
+      font-size: 1.2rem;
+      word-break: break-word;
+      margin-right: 10px;
+      user-select: text;
+    }
+
+    .copy-btn {
+      background: #00bfa5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      background: #008e76;
+    }
+
+    @media (max-width: 600px) {
+      textarea, button, .results {
+        width: 100%;
+      }
+
+      .result {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .copy-btn {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>صانع خطوط مزخرفة</h1>
+  
+  <textarea id="inputText" placeholder="ضع الكلمة هنا (بالانجليزية)"></textarea>
+  <button id="convertBtn">زخرفة</button>
+
+  <div id="resultsContainer"></div>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* style.css */
+
+/* إعداد الخطوط والخلفية العامة */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* الصور */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* زر العودة للرئيسية */
+.back-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #bb86fc;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #9a6dd8;
+}
+
+/* عنوان المادة */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #bb86fc;
+  margin-top: 20px;
+}
+
+/* تحسين استجابة الصور */
+@media (max-width: 600px) {
+  img {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
